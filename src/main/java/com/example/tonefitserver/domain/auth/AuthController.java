@@ -30,8 +30,8 @@ public class AuthController {
         return ApiResponse.success(authService.login(request));
     }
 
-    @PostMapping("/reissue")
-    public ApiResponse<TokenResponse> reissue(@RequestBody @Valid ReissueRequest request) {
-        return ApiResponse.success(authService.reissue(request));
+    @PostMapping("/refresh")
+    public ApiResponse<TokenResponse> refresh(@RequestBody @Valid ReissueRequest request) {
+        return ApiResponse.success(authService.refresh(request));
     }
 }

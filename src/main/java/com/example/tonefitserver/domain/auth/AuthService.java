@@ -55,7 +55,7 @@ public class AuthService {
     }
 
     @Transactional
-    public TokenResponse reissue(ReissueRequest request) {
+    public TokenResponse refresh(ReissueRequest request) {
         String refreshTokenString = request.refreshToken();
 
         if (!jwtTokenProvider.validateToken(refreshTokenString)) {
